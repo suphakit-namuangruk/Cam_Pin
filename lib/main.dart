@@ -6,7 +6,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+
+  // hardcode value test นะ
   final String requiredNumber = '123456';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -68,6 +71,8 @@ class MyApp extends StatelessWidget {
                   appContext: context,
                   length: 6,
                   keyboardType: TextInputType.number,
+
+                  // log ค่าเพื่อดู
                   onChanged: (value) {
                     print(value);
                   },
@@ -80,6 +85,8 @@ class MyApp extends StatelessWidget {
                     activeColor: Color(0xFF5771DF),
                     selectedColor: Color(0xFF3B4C7A),
                   ),
+
+                  // ตอนใส่เสร็จ
                   onCompleted: (value) {
                     if (value == requiredNumber) {
                       print('valid pin');
